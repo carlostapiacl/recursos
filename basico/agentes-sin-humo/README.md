@@ -21,10 +21,10 @@ coordinador le dice a quién encargarle qué.
 
 Empieza con dos o tres. Más agentes no es más trabajo hecho: cada uno hay que revisarlo.
 
-## 2. Un repo aparte para el equipo
+## 2. Un repo aparte: la memoria del equipo
 
-El trabajo del equipo vive en un repo git propio, separado del código. Ahí queda escrito qué se pidió, qué se
-decidió y qué está hecho, aunque cierres todas las pestañas.
+Lo que se decide y lo que queda hecho vive en un repo git propio, separado del código. Los mensajes van directo entre
+las sesiones; el repo es lo que queda escrito para mañana, aunque cierres todas las pestañas.
 
 ```bash
 cp -r plantilla ~/equipo   # desde esta carpeta
@@ -47,11 +47,19 @@ claude -n revisor --add-dir ~/equipo
 
 ## 3. Le hablas a uno solo: el coordinador
 
-Al coordinador le cuentas qué quieres. Él lo parte en tareas, escribe cada una en `tareas/` con el nombre del agente
-y hace commit. Cuando un agente termina, deja su resumen en `hecho/` y el coordinador lo revisa.
+El nombre de cada pestaña es su dirección. Las sesiones de Claude Code se ven entre sí y se mandan mensajes por su
+nombre: el coordinador le escribe al revisor, el revisor trabaja y le responde. No hace falta pasar todo por archivos.
 
-Si tu Claude Code trae mensajes entre sesiones, el coordinador además les avisa por su nombre. Si no los trae, el repo
-hace de buzón: cada agente mira `tareas/` cuando le dices «revisa tus tareas».
+Al coordinador le dices el cargo de cada uno, y así sabe a quién llamar:
+
+```
+Tú coordinas. revisor revisa los PR, editor escribe la documentación y datos saca las cifras.
+Repártelo entre ellos y avísame cuando esté.
+```
+
+Para ver con quién puede hablar, pregúntale «¿qué otras sesiones ves?». Los mensajes entre sesiones los está activando
+Anthropic de a poco: si tu Claude Code todavía no los trae, el repo del paso 2 hace de buzón (el coordinador deja la
+tarea en `tareas/` y le dices a cada agente «revisa tus tareas»).
 
 ## 4. El contexto: autocompact
 
