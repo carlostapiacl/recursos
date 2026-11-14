@@ -27,7 +27,7 @@ El trabajo del equipo vive en un repo git propio, separado del código. Ahí que
 decidió y qué está hecho, aunque cierres todas las pestañas.
 
 ```bash
-cp -r plantilla ~/equipo
+cp -r plantilla ~/equipo   # desde esta carpeta
 cd ~/equipo && git init && git add -A && git commit -m "equipo"
 ```
 
@@ -79,4 +79,4 @@ celular.
 - Un paquete de skills o de agentes que no escribiste tú.
 - Diez agentes el primer día.
 
-Licencia MIT.
+Licencia MIT (en la raíz del repo).
