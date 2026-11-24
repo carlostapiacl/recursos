@@ -12,7 +12,8 @@ Los explico en [carlostapia.cl](https://carlostapia.cl) y en Instagram, en la se
 
 ## Intermedio
 
-Viene en los próximos pasos de la serie.
+- [¿Cuánto tiempo sobrevive el código de tus agentes?](intermedio/supervivencia-de-codigo/): un script que mide qué
+  parte de lo escrito cada semana sigue viva con el paso de las semanas, con `git blame`. Incluye mi medición.
 
 ## Avanzado
 
